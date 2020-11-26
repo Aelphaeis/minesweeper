@@ -1,5 +1,6 @@
 package com.cruat.minesweeper.core;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class BoardConfig implements BoardConfigSpec {
@@ -8,6 +9,10 @@ public class BoardConfig implements BoardConfigSpec {
 	private int height;
 	private int bombCount;
 	private Random numberGenerator;
+
+	public BoardConfig() {
+		numberGenerator = new SecureRandom();
+	}
 
 	public int getLength() {
 		return length;
@@ -34,7 +39,6 @@ public class BoardConfig implements BoardConfigSpec {
 	public BoardConfig setBombCount(int bombCount) {
 		this.bombCount = bombCount;
 		return this;
-
 	}
 
 	public Random getNumberGenerator() {
