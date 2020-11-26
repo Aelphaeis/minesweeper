@@ -14,8 +14,8 @@ public class BoardFactory {
 			boolean retry = false;
 			do {
 				int bombLocation = random.nextInt(panelCount);
-				int x = bombLocation / conf.getLength();
-				int y = bombLocation % conf.getLength();
+				int y = bombLocation / conf.getHeight();
+				int x = bombLocation % conf.getLength();
 
 				retry = panels[x][y];
 				panels[x][y] = true;
