@@ -2,7 +2,7 @@ package com.cruat.minesweeper.core;
 
 import java.util.Random;;
 
-public interface BoardConfig {
+public interface BoardConfigSpec {
 
 	int getLength();
 

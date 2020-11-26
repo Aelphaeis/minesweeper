@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class BoardFactory {
 
-	public Board build(BoardConfig conf) {
+	public Board build(BoardConfigSpec conf) {
 		Random random = Objects.requireNonNull(conf.getNumberGenerator());
 
 		boolean[][] panels = new boolean[conf.getLength()][conf.getHeight()];
