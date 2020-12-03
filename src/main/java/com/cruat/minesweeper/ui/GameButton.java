@@ -9,15 +9,16 @@ import javax.swing.JButton;
 public class GameButton extends JButton {
 
 	private static final long serialVersionUID = 1L;
+	
+	public static final int MIN_LENGTH = 30;
+	public static final int MIN_HEIGHT = 30;
 
 	public GameButton() {
 		super("");
-		setMinimumSize(new Dimension(30, 30));
 		addActionListener(this.new DisableButtonListener());
+		setMinimumSize(new Dimension(MIN_LENGTH, MIN_HEIGHT));
 	}
 	
-	
-
 	private class DisableButtonListener implements ActionListener {
 
 		@Override
