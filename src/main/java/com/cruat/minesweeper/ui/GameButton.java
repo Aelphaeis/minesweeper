@@ -14,7 +14,6 @@ public class GameButton extends JButton {
 	public static final int MIN_HEIGHT = 30;
 
 	public GameButton() {
-		super("");
 		addActionListener(this.new DisableButtonListener());
 		setMinimumSize(new Dimension(MIN_LENGTH, MIN_HEIGHT));
 	}
