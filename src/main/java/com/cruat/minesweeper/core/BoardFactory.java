@@ -35,7 +35,7 @@ public class BoardFactory {
 
 				retry = panels[x][y];
 				panels[x][y] = true;
-				logger.trace("Bomb placed at [{}. {}]: {}", x, y, !retry);
+				logger.trace("Bomb placed at [{}, {}]: {}", x, y, !retry);
 
 			} while (retry);
 		}
