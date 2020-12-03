@@ -7,13 +7,12 @@ public enum BoardConfigPresets implements BoardConfigSpec {
 
 	BEGINNER(9, 9, 10), INTERMEDIATE(16, 16, 40), EXPERT(30, 16, 99);
 
-	private Random numberGenerator;
+	private static final Random NUM_GEN = new SecureRandom();
 	private int bombCount;
 	private int length;
 	private int height;
 
 	private BoardConfigPresets(int len, int height, int bombCount) {
-		this.numberGenerator = new SecureRandom();
 		this.bombCount = bombCount;
 		this.height = height;
 		this.length = len;
@@ -36,6 +35,6 @@ public enum BoardConfigPresets implements BoardConfigSpec {
 
 	@Override
 	public Random getNumberGenerator() {
-		return numberGenerator;
+		return NUM_GEN;
 	}
 }
