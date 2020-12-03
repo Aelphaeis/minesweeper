@@ -33,8 +33,8 @@ public class GenericBoard implements Board {
 			}
 		}
 
-		length = panels.length;
-		height = expected;
+		this.length = panels.length;
+		this.height = expected;
 		this.panels = panels;
 	}
 
